@@ -1,3 +1,13 @@
-<h1>About Us</h1>
-<p>Welcome to my Aout Page of Ember Application. Here you can find information of Our Story, mission, What we do, Why Choose Us </p>
-<p>Join Our Journey and w'll make it Unforgettable</p>
+{{page-title "About Us"}}
+
+<div class="page-content">
+  <h1>About Us</h1>
+  <p>Welcome to my About Page of Ember Application. Here you can find information of Our Story, mission, What we do, Why Choose Us</p>
+  <p>Join Our Journey and we'll make it Unforgettable</p>
+  
+  <div class="navigation-buttons">
+    <h3>Explore More:</h3>
+    <LinkTo @route="home" class="btn btn-primary">Back to Home</LinkTo>
+    <LinkTo @route="contact" class="btn btn-secondary">Contact Us</LinkTo>
+  </div>
+</div>

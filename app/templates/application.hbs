@@ -1,46 +1,22 @@
-{{!-- <h1>Hello from Ember!</h1>
-<p>This is my first Ember app fgfg🚀</p> --}}
+{{page-title "My Ember App"}}
 
-import EmberRouter from '@ember/routing/router';
-import config from './config/environment';
+<div class="app-container">
+  <header class="header">
+    <nav class="navigation">
+      <h1>My Ember App</h1>
+      <ul class="nav-links">
+        <li><LinkTo @route="home" class="nav-link">Home</LinkTo></li>
+        <li><LinkTo @route="about" class="nav-link">About</LinkTo></li>
+        <li><LinkTo @route="contact" class="nav-link">Contact</LinkTo></li>
+      </ul>
+    </nav>
+  </header>
 
-const Router = EmberRouter.extend({
-location: config.locationType,
-rootURL: config.rootURL,
-});)
+  <main class="main-content">
+    {{outlet}}
+  </main>
 
-Router.map(function() {
-  this.route('home');
-  this.route('about');
-  this.route('contact');
-});
-
-export default Router;
-
-
-import Route from '@ember/routing/route';
-
-export default class HomeRoute extends Route {}
-
-import Route from '@ember/routing/route';
-
-export default class AboutRoute extends Route {}
-
-import Route from '@ember/routing/route';
-
-export default class ContactRoute extends Route {}
-
-<h2>Welcome to the Home Page!</h2>
-<h2>About Us</h2>
-<h2>Contact Us</h2>
-
-
-
-<nav>
-  {{#link-to "home"}}Home{{/link-to}}
-  {{#link-to "about"}}About{{/link-to}}
-  {{#link-to "contact"}}Contact{{/link-to}}
-</nav>
-
-
-{{outlet}}
+  <footer class="footer">
+    <p>&copy; 2025 My Ember App. All rights reserved.</p>
+  </footer>
+</div>
